@@ -9,7 +9,6 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-
 html{scroll-behavior:smooth;}
 
 body{
@@ -22,26 +21,37 @@ nav{
 position:fixed;
 top:0;
 width:100%;
-background:rgba(0,0,0,0.85);
+background:rgba(0,0,0,0.7);
+backdrop-filter:blur(10px);
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 20px;
+padding:12px 15px;
 z-index:1000;
 }
 
-nav h2{color:#f4c430;}
+nav h2{
+color:#f4c430;
+font-size:18px;
+line-height:1.2;
+}
 
 nav ul{
 display:flex;
-gap:20px;
+gap:12px;
 list-style:none;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-font-size:14px;
+font-size:12px;
+opacity:0.8;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#f4c430;
 }
 
 /* HERO */
@@ -51,39 +61,44 @@ display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-padding:20px;
+padding:80px 20px 20px;
 
 background:
-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.6)),
+linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.6)),
 url('https://images.unsplash.com/photo-1555244162-803834f70033');
 
 background-size:cover;
 background-position:center;
 }
 
-.hero-content{
-max-width:600px;
-}
-
 .hero h1{
-font-size:32px;
+font-size:28px;
 color:#f4c430;
-margin-bottom:15px;
+margin-bottom:12px;
+line-height:1.3;
 }
 
 .hero p{
-font-size:14px;
-margin-bottom:20px;
+font-size:13px;
+margin-bottom:18px;
+opacity:0.9;
 }
 
+/* BUTTON */
 .btn{
 display:inline-block;
 padding:12px 25px;
 background:#f4c430;
 color:black;
-border-radius:25px;
+border-radius:30px;
 text-decoration:none;
 font-weight:600;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+box-shadow:0 8px 25px rgba(0,0,0,0.4);
 }
 
 /* SECTION */
@@ -100,13 +115,19 @@ margin-bottom:20px;
 
 /* CARD */
 .card{
-background:#111;
+background:linear-gradient(145deg,#111,#1a1a1a);
 padding:20px;
-border-radius:12px;
-margin-bottom:15px;
+border-radius:16px;
+margin-bottom:18px;
+box-shadow:0 8px 25px rgba(0,0,0,0.4);
+transition:0.3s;
 }
 
-/* SERVICES GRID */
+.card:hover{
+transform:translateY(-4px);
+}
+
+/* SERVICES */
 .grid{
 display:grid;
 grid-template-columns:1fr;
@@ -114,16 +135,20 @@ gap:15px;
 }
 
 /* CONTACT */
-.contact p{margin:8px 0;}
+.contact p{
+margin:8px 0;
+font-size:14px;
+}
 
 /* FLOAT */
 .whatsapp{
 position:fixed;
-bottom:20px;
+bottom:80px;
 left:15px;
 background:#25D366;
 padding:14px;
 border-radius:50%;
+text-decoration:none;
 }
 
 .top{
@@ -143,14 +168,18 @@ nav{
 padding:15px 8%;
 }
 
+nav ul{
+gap:20px;
+}
+
+nav a{
+font-size:14px;
+}
+
 .hero{
 justify-content:flex-start;
 text-align:left;
 padding:0 8%;
-}
-
-.hero-content{
-max-width:500px;
 }
 
 .hero h1{
@@ -184,7 +213,7 @@ grid-template-columns:repeat(3,1fr);
 
 <!-- HERO -->
 <section class="hero" id="home">
-<div class="hero-content">
+<div>
 <h1>Luxury Catering Experience</h1>
 <p>Authentic Karavali & Udupi cuisine crafted for unforgettable events.</p>
 <a href="#contact" class="btn">Book Now</a>
@@ -207,12 +236,12 @@ We provide premium catering services for weddings, parties, and corporate events
 <h2>Our Services</h2>
 
 <div class="grid">
-<div class="card">Wedding Catering</div>
-<div class="card">Birthday Parties</div>
-<div class="card">Corporate Events</div>
-<div class="card">Outdoor Catering</div>
-<div class="card">Traditional Karavali Food</div>
-<div class="card">Custom Event Planning</div>
+<div class="card">🍽️ Wedding Catering</div>
+<div class="card">🎉 Birthday Parties</div>
+<div class="card">🏢 Corporate Events</div>
+<div class="card">🌿 Outdoor Catering</div>
+<div class="card">🍛 Karavali Food</div>
+<div class="card">📋 Event Planning</div>
 </div>
 
 </section>
