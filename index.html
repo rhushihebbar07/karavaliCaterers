@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karavali Caterers</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+html{scroll-behavior:smooth;}
+
+body{
+background:#0a0a0a;
+color:white;
+}
+
+/* NAV */
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(0,0,0,0.85);
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 20px;
+z-index:1000;
+}
+
+nav h2{color:#f4c430;}
+
+nav ul{
+display:flex;
+gap:20px;
+list-style:none;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-size:14px;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+
+background:
+linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.6)),
+url('https://images.unsplash.com/photo-1555244162-803834f70033');
+
+background-size:cover;
+background-position:center;
+}
+
+.hero-content{
+max-width:600px;
+}
+
+.hero h1{
+font-size:32px;
+color:#f4c430;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:14px;
+margin-bottom:20px;
+}
+
+.btn{
+display:inline-block;
+padding:12px 25px;
+background:#f4c430;
+color:black;
+border-radius:25px;
+text-decoration:none;
+font-weight:600;
+}
+
+/* SECTION */
+section{
+padding:60px 20px;
+max-width:1100px;
+margin:auto;
+}
+
+h2{
+color:#f4c430;
+margin-bottom:20px;
+}
+
+/* CARD */
+.card{
+background:#111;
+padding:20px;
+border-radius:12px;
+margin-bottom:15px;
+}
+
+/* SERVICES GRID */
+.grid{
+display:grid;
+grid-template-columns:1fr;
+gap:15px;
+}
+
+/* CONTACT */
+.contact p{margin:8px 0;}
+
+/* FLOAT */
+.whatsapp{
+position:fixed;
+bottom:20px;
+left:15px;
+background:#25D366;
+padding:14px;
+border-radius:50%;
+}
+
+.top{
+position:fixed;
+bottom:20px;
+right:15px;
+background:#f4c430;
+padding:12px;
+border-radius:50%;
+cursor:pointer;
+}
+
+/* DESKTOP */
+@media(min-width:768px){
+
+nav{
+padding:15px 8%;
+}
+
+.hero{
+justify-content:flex-start;
+text-align:left;
+padding:0 8%;
+}
+
+.hero-content{
+max-width:500px;
+}
+
+.hero h1{
+font-size:48px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.grid{
+grid-template-columns:repeat(3,1fr);
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+<h2>Karavali Caterers</h2>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+<div class="hero-content">
+<h1>Luxury Catering Experience</h1>
+<p>Authentic Karavali & Udupi cuisine crafted for unforgettable events.</p>
+<a href="#contact" class="btn">Book Now</a>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+<div class="card">
+<h2>About Us</h2>
+<p>
+Karavali Caterers & Event Management, Kodi, Sasthana – Udupi.
+We provide premium catering services for weddings, parties, and corporate events.
+</p>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+<h2>Our Services</h2>
+
+<div class="grid">
+<div class="card">Wedding Catering</div>
+<div class="card">Birthday Parties</div>
+<div class="card">Corporate Events</div>
+<div class="card">Outdoor Catering</div>
+<div class="card">Traditional Karavali Food</div>
+<div class="card">Custom Event Planning</div>
+</div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<div class="card contact">
+<h2>Contact</h2>
+
+<p>📍 Kodi, Sasthana – Udupi</p>
+<p>📞 Varun: 8660964722</p>
+<p>📞 Shreyas: 9986615805</p>
+
+<p>🟢 Veg | 🔴 Non-Veg</p>
+
+<a href="tel:8660964722" class="btn">Call Now</a>
+</div>
+</section>
+
+<footer style="text-align:center;padding:20px;background:black;">
+© 2026 Karavali Caterers
+</footer>
+
+<a href="https://wa.me/918660964722" class="whatsapp">💬</a>
+<div class="top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</div>
+
+</body>
+</html>
